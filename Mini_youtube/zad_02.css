@@ -1,0 +1,253 @@
+body {
+  font-family: Roboto, Arial, sans-serif;
+  margin: 0;
+}
+body header {
+  display: flex;
+  padding: 0.5em;
+  border-bottom: 1px solid rgb(226, 225, 225);
+  justify-content: space-between;
+}
+body header .start {
+  display: flex;
+  align-items: center;
+}
+body header .start button {
+  border: rgb(255, 255, 255) solid 0px;
+  background-color: white;
+  font-size: large;
+  padding: 0.5em;
+  cursor: pointer;
+}
+body header .start .logo {
+  display: flex;
+  align-items: center;
+  padding-left: 1em;
+}
+body header .start .logo .fa-youtube {
+  color: red;
+  padding-right: 0.2em;
+}
+body header .start .logo .name {
+  font-weight: bolder;
+  font-size: 20px;
+}
+body header .start .logo .pl {
+  font-size: 10px;
+  align-self: flex-start;
+  color: gray;
+}
+body header .center {
+  display: flex;
+  border: 1px solid lightgray;
+  justify-self: center;
+}
+body header .center #search {
+  padding: 0.5em;
+  border: 0;
+  width: 30em;
+  font-size: 15px;
+  padding-left: 1em;
+}
+body header .center .search {
+  border: 0;
+  border-left: 1px solid lightgray;
+  background-color: #f8f8f8;
+  width: 3.5em;
+}
+body header .end {
+  display: flex;
+  gap: 1.5em;
+}
+body header .end button {
+  border: 0;
+  background-color: white;
+  font-size: larger;
+}
+body header .end .login {
+  color: #065fd4;
+  border: 1px solid #065fd4;
+  display: flex;
+  justify-content: space-between;
+  text-transform: uppercase;
+  align-items: center;
+  width: 8em;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+  cursor: pointer;
+}
+body header .end .login div {
+  font-size: 15px;
+  font-weight: bold;
+}
+body #body {
+  display: flex;
+}
+body #body #left-section {
+  width: 28em;
+}
+body #body #left-section .link-group ul {
+  list-style: none;
+  border-bottom: 1px solid lightgray;
+  padding: 0;
+  margin: 0;
+  padding-left: 0.5em;
+  margin: 0.4em;
+}
+body #body #left-section .link-group ul li {
+  padding: 1em;
+}
+body #body #left-section .link-group ul li i {
+  margin-right: 1em;
+}
+body #body #left-section .login-info {
+  padding: 1em;
+  border-bottom: 1px solid lightgray;
+  display: flex;
+  flex-direction: column;
+  margin-left: 0.5em;
+}
+body #body #left-section .login-info button {
+  border: 0;
+  background-color: white;
+  font-size: larger;
+  padding: 0.5em;
+}
+body #body #left-section .login-info .login {
+  color: #065fd4;
+  border: 1px solid #065fd4;
+  display: flex;
+  justify-content: space-between;
+  text-transform: uppercase;
+  align-items: center;
+  width: 8em;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+  cursor: pointer;
+}
+body #body #left-section .login-info .login div {
+  font-size: 15px;
+  font-weight: bold;
+}
+body #body #left-section .login-info p {
+  padding: 0;
+  margin: 0;
+  padding-bottom: 1em;
+  font-size: 11px;
+}
+body #body #left-section .link-group .header {
+  padding: 1em;
+  padding-bottom: 0;
+  color: gray;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-left: 0.5em;
+  font-size: 14px;
+}
+body #body #main-section .buttons {
+  display: flex;
+  padding: 1em;
+  gap: 1em;
+}
+body #body #main-section .buttons button {
+  border: 1px solid lightgray;
+  background-color: rgb(246, 244, 244);
+  border-radius: 15px;
+  padding: 0.3em;
+  padding-left: 1em;
+  padding-right: 1em;
+  letter-spacing: 1px;
+  font-weight: bold;
+}
+body #body #main-section .buttons .active {
+  color: white;
+  background-color: black;
+}
+body #body #main-section .main-movie-section {
+  display: flex;
+  flex-flow: wrap;
+  gap: 1.5em;
+  background-color: #f8f8f8;
+  padding: 1.5em;
+  border-top: 1px solid rgb(231, 231, 231);
+}
+body #body #main-section .main-movie-section .movie {
+  display: flex;
+  flex-direction: column;
+  flex-flow: wrap;
+  width: 16em;
+  height: 18em;
+}
+body #body #main-section .main-movie-section .movie .movie-frame {
+  width: 16em;
+  height: 10em;
+  background-color: #e1bbbb, #e1c6bb, #eeeccc, #d7e1bb, #bbe1ca, #bbdce1, #bcbbe1, #d9bbe1;
+  cursor: pointer;
+}
+body #body #main-section .main-movie-section .movie .avatar {
+  width: 40px;
+  height: 40px;
+  background-color: lightgray;
+  border-radius: 50%;
+  display: inline;
+  margin-right: 1em;
+}
+body #body #main-section .main-movie-section .movie .movie-info {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  width: 75%;
+  height: 7em;
+}
+body #body #main-section .main-movie-section .movie .movie-info .title {
+  display: inline;
+  font-weight: bold;
+  font-size: 14px;
+}
+body #body #main-section .main-movie-section .movie .movie-info .info {
+  font-size: 12px;
+  font-weight: bold;
+  color: gray;
+}
+body #body #main-section .main-movie-section .movie .movie-info .info .channel-name {
+  padding-bottom: 0.5em;
+}
+body #body #main-section .main-movie-section .movie .movie-info .info span {
+  font-size: 10px;
+  padding-right: 1em;
+}
+body #body #main-section .main-movie-section .movie:nth-of-type(1) .movie-frame {
+  background-color: #e1bbbb;
+}
+body #body #main-section .main-movie-section .movie:nth-of-type(2) .movie-frame {
+  background-color: #e1c6bb;
+}
+body #body #main-section .main-movie-section .movie:nth-of-type(3) .movie-frame {
+  background-color: #eeeccc;
+}
+body #body #main-section .main-movie-section .movie:nth-of-type(4) .movie-frame {
+  background-color: #d7e1bb;
+}
+body #body #main-section .main-movie-section .movie:nth-of-type(5) .movie-frame {
+  background-color: #bbe1ca;
+}
+body #body #main-section .main-movie-section .movie:nth-of-type(6) .movie-frame {
+  background-color: #bbdce1;
+}
+body #body #main-section .main-movie-section .movie:nth-of-type(7) .movie-frame {
+  background-color: #bcbbe1;
+}
+body #body #main-section .main-movie-section .movie:nth-of-type(8) .movie-frame {
+  background-color: #d9bbe1;
+}
+body #body #main-section .main-movie-section .header {
+  font-size: 22px;
+  width: 100%;
+}
+body #body #main-section .main-movie-section:nth-of-type(3) {
+  border-top: 3px solid rgb(231, 231, 231);
+  border-bottom: 3px solid rgb(231, 231, 231);
+}
+body #body #main-section .main-movie-section:nth-of-type(3) .movie .movie-frame {
+  background-color: lightgray;
+}/*# sourceMappingURL=zad_02.css.map */

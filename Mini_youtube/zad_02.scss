@@ -1,0 +1,256 @@
+$login-color: #065fd4;
+$header-button: #030303;
+$background-color: #f8f8f8;
+$category-hover: #f2f2f2;
+$movie-colors: #e1bbbb, #e1c6bb, #eeeccc, #d7e1bb, #bbe1ca, #bbdce1, #bcbbe1, #d9bbe1;
+
+body { 
+    font-family: Roboto, Arial, sans-serif;
+    margin: 0;
+    header {
+        display: flex;
+        padding:0.5em;
+        border-bottom: 1px solid rgb(226, 225, 225);
+        justify-content: space-between;
+        .start {
+            display: flex;
+            align-items: center;
+            button {
+                border: rgb(255, 255, 255) solid 0px;
+                background-color: white;
+                font-size: large;
+                padding: 0.5em;
+                cursor:pointer;
+            }
+            .logo {
+                display: flex;
+                align-items: center;
+                padding-left:1em;
+                .fa-youtube {
+                    color:red;
+                    padding-right:0.2em;
+                }
+                .name {
+                    font-weight: bolder;
+                    font-size: 20px;
+                }
+                .pl {
+                    font-size: 10px;
+                    align-self: flex-start;
+                    color:gray;
+                }
+            }
+        }
+        .center {
+            display: flex;
+            border: 1px solid lightgray;
+            justify-self: center;
+            #search {
+                padding:0.5em;
+                border:0;
+                width: 30em;
+                font-size: 15px;
+                padding-left: 1em
+            }
+            .search {
+                border:0;
+                border-left:1px solid lightgray;
+                background-color: #f8f8f8;
+                width: 3.5em;
+            }
+        }
+        .end {
+            display: flex;
+            gap:1.5em;
+            button{
+                border:0;
+                background-color: white;
+                font-size: larger;
+            }
+            .login {
+                color:$login-color;
+                border: 1px solid $login-color;
+                display: flex;
+                justify-content: space-between;
+                text-transform: uppercase;
+                align-items: center;
+                width: 8em;
+                padding-left:0.5em;
+                padding-right: 0.5em;
+                cursor: pointer;
+                div{
+                    font-size: 15px;
+                    font-weight: bold;
+                }
+            }
+        }
+    } 
+    #body {
+        display: flex;        
+        #left-section {
+            width:28em;
+            .link-group {
+                ul {
+                    list-style: none;
+                    border-bottom: 1px solid lightgray;
+                    padding: 0;
+                    margin: 0;
+                    padding-left: 0.5em;
+                    margin:0.4em;
+                    li {
+                        padding: 1em;
+                        i {
+                            margin-right: 1em;
+                        }
+                    }
+                }
+            }
+            .login-info {
+                padding:1em;
+                border-bottom: 1px solid lightgray;
+                display: flex;
+                flex-direction: column;
+                margin-left:0.5em;
+                button{
+                    border:0;
+                    background-color: white;
+                    font-size: larger;
+                    padding:0.5em;
+                }
+                .login {
+                    color:$login-color;
+                    border: 1px solid $login-color;
+                    display: flex;
+                    justify-content: space-between;
+                    text-transform: uppercase;
+                    align-items: center;
+                    width: 8em;
+                    padding-left:0.5em;
+                    padding-right: 0.5em;
+                    cursor: pointer;
+                    div{
+                        font-size: 15px;
+                        font-weight: bold;
+                    }
+                }
+                p {
+                    padding: 0;
+                    margin: 0;
+                    padding-bottom: 1em;
+                    font-size: 11px;
+                }
+            }
+            .link-group {
+                .header {
+                    padding: 1em;
+                    padding-bottom: 0;
+                    color:gray;
+                    text-transform: uppercase;
+                    font-weight: bold;
+                    margin-left:0.5em;
+                    font-size: 14px;
+                }
+
+            }
+        }
+        #main-section {
+            .buttons {
+                display: flex;
+                padding:1em;
+                gap:1em;
+                button {
+                    border: 1px solid lightgray;
+                    background-color: rgb(246, 244, 244);
+                    border-radius: 15px;
+                    padding:0.3em;
+                    padding-left: 1em;
+                    padding-right: 1em;
+                    letter-spacing: 1px;
+                    font-weight: bold;
+                }
+                .active {
+                    color:white;
+                    background-color: black;     
+                }  
+            }
+            .main-movie-section {
+                display: flex;
+                flex-flow: wrap;
+                gap:1.5em;
+                background-color: #f8f8f8;
+                padding:1.5em;
+                border-top: 1px solid rgb(231, 231, 231);
+                .movie {
+                    display: flex;
+                    flex-direction: column;
+                    flex-flow:wrap;
+                    width: 16em;
+                    height: 18em;
+                    .movie-frame {
+                        width: 16em;
+                        height: 10em;
+                        background-color: $movie-colors;
+                        cursor: pointer;
+                    }
+                    .avatar {
+                        width: 40px;
+                        height: 40px;
+                        background-color: lightgray;
+                        border-radius: 50%;
+                        display: inline;
+                        margin-right: 1em;
+
+                    }
+                    .movie-info {
+                        display: flex;
+                        flex-direction: column;
+                        gap:1em;
+                        width:75%;
+                        height: 7em;
+                        .title {
+                            display: inline;
+                            font-weight: bold;
+                            font-size: 14px;
+                        }
+                        .info {
+                            font-size: 12px;
+                            font-weight: bold;
+                            color:gray;
+                            .channel-name{
+                                padding-bottom:0.5em;
+                            }
+                            span {
+                                font-size:10px;
+                                padding-right: 1em;
+                            }
+                        }
+                    }
+                }
+                $licznik: 1;
+                @each $color in $movie-colors{
+                    .movie:nth-of-type(#{$licznik}){
+                        .movie-frame{
+                            background-color: $color;
+                        }
+                    }
+                    $licznik: $licznik + 1;
+                }
+                .header {
+                    font-size: 22px;
+                    width: 100%;
+                    // border-top: 1px solid rgb(231, 231, 231);
+                }
+                    
+            }
+            .main-movie-section:nth-of-type(3){
+                border-top: 3px solid rgb(231, 231, 231);
+                border-bottom: 3px solid rgb(231, 231, 231);
+                .movie {
+                    .movie-frame {
+                        background-color: lightgray;
+                    }
+                }
+            }
+        }
+    }   
+}

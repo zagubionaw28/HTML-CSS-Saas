@@ -1,0 +1,212 @@
+$primary-color: #fb6100;
+$type-section-background: #f8f5f2;
+$type-section-background-2: #d7d7d7;
+$item-colors: #e1bbbb, #e1c6bb, #eeeccc, #d7e1bb, #bbe1ca, #bbdce1, #bcbbe1, #d9bbe1;
+body {
+    font-family: BlinkMacSystemFont, Segoe UI, Helvetica Neue, Helvetica, Arial, sans-serif;
+    margin: 0;
+    header {
+        background-color: $primary-color;
+        width: 100%;
+        height: 3em;
+        display: flex;
+        justify-content: space-between;
+        color:white;
+        .logo {
+            padding:1em;
+            font-size:18px;
+            align-self: center;
+            span:nth-of-type(1) {
+                font-weight: bolder;
+            }
+        }
+        .address {
+            border-bottom: 1px solid white;
+            height: 1.4em;
+            letter-spacing: 2px;
+            font-weight: bolder;
+            align-self: center;
+            font-size: 12px;
+
+        }
+        button {
+            border: 0;
+            padding:1em;
+            align-self: center;
+            background-color: $primary-color;
+            color:white;
+            width: 9em;
+            .fa-bars {
+                font-size: 20px;
+                padding-left:3em;
+                cursor: pointer;
+            }
+        }
+    }
+    .type-section {
+        background-color: $type-section-background;
+        display: flex;
+        justify-content: center;
+        height: 2.5em;
+        border-bottom:1px solid $type-section-background-2;
+        .buttons {
+            display: flex;
+            button {
+                border:0;
+                background-color: $type-section-background;
+                width:12em;
+                font-size: 12px;
+            }
+            .button-1 {
+                color:$primary-color;
+                border-bottom: 1px solid $primary-color;
+            }
+        }
+    }
+    .category-section {
+        display: flex;
+        margin-left:10em;
+        margin-right:13em;
+        gap:1em;
+        padding-bottom: 0.5em;
+        padding-top: 0.5em;
+        justify-content: baseline;
+        button {
+            border: 0;
+            background-color: white;
+        }
+        .active {
+            background-color: $primary-color;
+            border-radius: 20px;
+            padding:0.5em;
+            width: 7em;
+            color:white;
+        }
+        button:nth-of-type(12) {
+            color: $primary-color;
+        }
+    }
+    .main-section {
+        margin-left:10em;
+        margin-right:10em;
+        display: flex;
+        .left-main-section {
+            width: 20em;
+            .header {
+                font-weight: bold;
+                padding-bottom:0.7em;
+                padding-top:0.7em;
+            }
+            .radio-button {
+                display:flex;
+                padding-bottom:0.5em;
+                gap:0.3em;
+            }
+            .stars{
+                color:lightgray;
+                padding-bottom:0.5em;
+                padding-top: 0.5em;
+            }
+            .checkbox {
+                display: flex;
+                gap:0.4em;
+                padding-top:0.5em;
+            }
+        }
+        .right-main-section {
+            // display: flex;
+            // flex-direction: column;
+            .search {
+                display: flex;
+                #search {
+                    width:50em;
+                    height: 2.5em;
+                    border:0;
+                    border: 1px solid lightgray;
+                    padding-left:1em;
+                }
+                button {
+                    border:0;
+                    background-color: white;
+                    font-size: 20px;
+                    align-self: center;
+                    padding-left:1em;
+
+                }
+            }
+            .header {
+                padding-top:1em;
+                padding-bottom:1em;
+                font-weight: bold;
+                letter-spacing: 1px;
+            }
+            .item {
+                border: 1px solid lightgray;
+                height: 8em;
+                display: flex;
+                color:#757575;
+                margin-bottom: 1em;
+                .pic {
+                    width: 15em;
+                    height: 8em;
+                }
+                .logo {
+                    position: relative;
+                    width: 5em;
+                    height: 5em;
+                    border-radius: 50%;
+                    background-color: white;
+                    top:1.4em;
+                    right: 2.5em;
+                    display: flex;
+                    .name {
+                        display: flex;
+                        justify-content: center;
+                          transform: rotate(-10deg);
+                          color:$primary-color;
+                          font-weight: bold;
+                          align-self: center;
+                          width:5em;
+                    }
+                }
+                .info {
+                    .header {
+                        padding-top:1em;
+                        padding-bottom: 0.2em;
+                    }
+                    .description {
+                        font-size: 14px;
+                        padding-bottom:0.6em;
+                    }
+                    .content {
+                        font-size: 14px;
+                        display: flex;
+                        .star {
+                            color:$primary-color;
+                            span {
+                                color: #757575;
+                            }
+                        }
+                        div {
+                            display: flex;
+                            gap:0.5em;
+                            padding-right: 0.7em;
+                        }
+                    }
+                }
+            }
+            $licznik:1;
+            @for $i from 1 through 2 {
+                @each $color in $item-colors{
+                    .item:nth-of-type(#{$licznik}){
+                        .pic{
+                            background-color: $color;
+                        }
+                    }
+                    $licznik: $licznik + 1;
+                }
+            }
+        }
+    }
+    
+}
